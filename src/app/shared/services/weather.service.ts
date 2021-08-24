@@ -73,6 +73,6 @@ export class WeatherService implements OnDestroy {
     if (this.unit !== Units.SI) {
       params = params.append('units', this.unit.toLocaleLowerCase());
     }
-    return this.http.get<T>(`https://api.openweathermap.org/data/2.5/${ url }`, { params });
+    return this.http.get<T>(environment.apiUri + `${ url }`, { params });
   }
 }

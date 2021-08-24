@@ -49,7 +49,7 @@ export class HomePage implements OnInit, OnDestroy {
   ngOnInit() {
     this.searchControl = new FormControl('', Validators.required);
     this.searchControlWithAutocomplete = new FormControl(undefined);
-    
+
     this.searchControlWithAutocomplete.valueChanges
       .pipe(takeUntil(this.componentDestroyed$))
       .subscribe((value: CityTypeaheadItem) => {

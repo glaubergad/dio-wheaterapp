@@ -1,4 +1,4 @@
-import { createReducer, Action, on } from '@ngrx/store'
+import { createReducer, Action, on } from '@ngrx/store';
 
 import * as fromHomeActions from './home.actions';
 
@@ -12,7 +12,7 @@ export const homeInitialState: HomeState = {
   entity: undefined,
   loading: false,
   error: false,
-}
+};
 
 const reducer = createReducer(
   homeInitialState,
